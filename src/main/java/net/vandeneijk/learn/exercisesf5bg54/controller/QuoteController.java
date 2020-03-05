@@ -20,7 +20,7 @@ public class QuoteController {
         this.chuckNorrisQuoteService = chuckNorrisQuoteService;
     }
 
-    @RequestMapping("/")
+    @RequestMapping({"/", ""})
     public String getQuote(Model model) {
         model.addAttribute("joke", chuckNorrisQuoteService.getQuote());
         return "jokes/joke";
