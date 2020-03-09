@@ -1,5 +1,6 @@
 package net.vandeneijk.learn.exercisesf5bg54.service;
 
+import guru.springframework.norris.chuck.ChuckNorrisQuotes;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +12,7 @@ class ChuckNorrisQuoteServiceTest {
 
     @BeforeEach
     void setUp() {
-        quoteService = new ChuckNorrisQuoteService();
+        quoteService = new ChuckNorrisQuoteService(new ChuckNorrisQuotes());
     }
 
     @Test
